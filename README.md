@@ -2,7 +2,7 @@
 
 A production-ready, Raycast-inspired portfolio built with React 18, TypeScript, and modern CSS-in-JS patterns. Features comprehensive theming, dark/light mode switching, and a polished development workflow.
 
-## 🚀 Quick Start
+## Quick Start
 
 ```bash
 npm install
@@ -11,7 +11,7 @@ npm run dev
 
 Visit `http://localhost:5173` to view your portfolio.
 
-## 🎯 Key Features
+## Key Features
 
 ### **Modern Architecture**
 - **React 18** with TypeScript 5 for type safety
@@ -61,7 +61,7 @@ src/
 └── App.tsx              # Main application component
 ```
 
-## 🎨 Styling Architecture
+## Styling Architecture
 
 ### CSS-in-JS with Theme Integration
 
@@ -129,7 +129,7 @@ body {
 }
 ```
 
-## 🔄 Theme System Flow
+## Theme System Flow
 
 ```mermaid
 sequenceDiagram
@@ -148,7 +148,7 @@ sequenceDiagram
     Components->>User: UI updates instantly
 ```
 
-## 🛠 Development Workflow
+## Development Workflow
 
 ### Available Scripts
 
@@ -184,7 +184,7 @@ npm test -- --watch
 npm test -- --coverage
 ```
 
-## 🎨 Design System
+## Design System
 
 ### Color Palette
 ```tsx
@@ -222,7 +222,7 @@ light: {
 ### Spacing System
 Consistent 8px-based spacing throughout the application.
 
-## 🔧 Customization
+## Customization
 
 ### Adding New Components
 
@@ -251,7 +251,7 @@ export function NewComponent() {
 
 Update the theme logic in `hooks/useTheme.ts` and CSS variables in `styles/globals.css`.
 
-## 📦 Dependencies
+## Dependencies
 
 ### Core Dependencies
 - **react** (18.3.1) - React library with concurrent features
@@ -268,7 +268,7 @@ Update the theme logic in `hooks/useTheme.ts` and CSS variables in `styles/globa
 - **eslint** (9.9.0) - Code linting
 - **prettier** (3.3.3) - Code formatting
 
-## 🚀 Deployment
+## Deployment
 
 ### Vercel (Recommended)
 ```bash
@@ -290,7 +290,7 @@ npm run build
 # Upload the 'dist' folder to your hosting service
 ```
 
-## 🧪 Testing the Application
+## Testing the Application
 
 The application includes several test suites:
 
@@ -301,7 +301,7 @@ The application includes several test suites:
 
 All tests pass and provide confidence in the application's reliability.
 
-## 📈 Performance Features
+## Performance Features
 
 - **Vite HMR** - Instant hot module replacement during development
 - **Code Splitting** - Route-based lazy loading ready for implementation
@@ -309,18 +309,13 @@ All tests pass and provide confidence in the application's reliability.
 - **Modern Bundling** - Optimized ES modules and asset handling
 - **Theme Memoization** - Efficient style recalculation with useMemo
 
-## 🎯 Architecture Decisions
+## Architecture Decisions
 
 ### Why CSS-in-JS with Inline Styles?
 - **Type Safety**: Full TypeScript integration
 - **Theme Integration**: Direct access to theme variables
 - **Performance**: No CSS parsing overhead
 - **Maintainability**: Styles colocated with components
-
-### Why Not Material-UI makeStyles?
-- **Compatibility Issues**: makeStyles had conflicts with current React/Vite setup
-- **Bundle Size**: Inline styles reduce dependency weight
-- **Simplicity**: Fewer abstractions, easier debugging
 
 ### Key Benefits
 1. **Developer Experience**: Fast development with HMR and TypeScript
@@ -331,9 +326,8 @@ All tests pass and provide confidence in the application's reliability.
 
 ---
 
-**MIT License** | Built with ❤️ using modern React patterns
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch: `git checkout -b feature/amazing-feature`
@@ -344,9 +338,9 @@ All tests pass and provide confidence in the application's reliability.
 ## 📝 Changelog
 
 ### v1.0.0 (Current)
-- ✅ Initial release with React 18 + TypeScript
-- ✅ Complete dark/light theme system
-- ✅ Raycast-inspired design
-- ✅ Comprehensive test suite
-- ✅ CSS-in-JS implementation with theme integration
-- ✅ Production-ready build configuration
+-  nitial release with React 18 + TypeScript
+- Complete dark/light theme system
+- Raycast-inspired design
+- Comprehensive test suite
+- CSS-in-JS implementation with theme integration
+- Production-ready build configuration
