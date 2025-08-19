@@ -335,10 +335,10 @@ All tests pass and provide confidence in the application's reliability.
 4. Push to branch: `git push origin feature/amazing-feature`
 5. Open a Pull Request
 
-## 📝 Changelog
+## Changelog
 
 ### v1.0.0 (Current)
--  nitial release with React 18 + TypeScript
+- Initial release with React 18 + TypeScript
 - Complete dark/light theme system
 - Raycast-inspired design
 - Comprehensive test suite
