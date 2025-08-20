@@ -14,6 +14,7 @@ Visit `http://localhost:5173` to view your portfolio.
 ## Key Features
 
 ### **Modern Architecture**
+
 - **React 18** with TypeScript 5 for type safety
 - **Vite** for blazing-fast development and building
 - **React Router v6** for client-side navigation
@@ -21,6 +22,7 @@ Visit `http://localhost:5173` to view your portfolio.
 - **Comprehensive testing** with Vitest and Testing Library
 
 ### **Advanced Theme System**
+
 - Complete dark/light mode implementation
 - CSS custom properties for consistent theming
 - Inline styles with theme-aware logic
@@ -28,6 +30,7 @@ Visit `http://localhost:5173` to view your portfolio.
 - Real-time theme switching without page reload
 
 ### **Raycast-inspired Design**
+
 - Clean, command-palette aesthetic
 - Professional gradient backgrounds
 - Polished micro-interactions
@@ -74,26 +77,29 @@ import { useMemo } from 'react'
 export function MyComponent() {
   const { dark } = useTheme()
 
-  const styles = useMemo(() => ({
-    container: {
-      backgroundColor: dark ? '#0b0f1a' : '#ffffff',
-      color: dark ? '#ffffff' : '#1f2937',
-      padding: '24px',
-      borderRadius: '12px',
-      transition: 'all 0.3s ease',
-    },
-    button: {
-      backgroundColor: '#3770ff',
-      color: '#ffffff',
-      border: 'none',
-      padding: '12px 24px',
-      borderRadius: '8px',
-      cursor: 'pointer',
-      '&:hover': {
-        backgroundColor: '#1d5af0',
+  const styles = useMemo(
+    () => ({
+      container: {
+        backgroundColor: dark ? '#0b0f1a' : '#ffffff',
+        color: dark ? '#ffffff' : '#1f2937',
+        padding: '24px',
+        borderRadius: '12px',
+        transition: 'all 0.3s ease',
       },
-    },
-  }), [dark])
+      button: {
+        backgroundColor: '#3770ff',
+        color: '#ffffff',
+        border: 'none',
+        padding: '12px 24px',
+        borderRadius: '8px',
+        cursor: 'pointer',
+        '&:hover': {
+          backgroundColor: '#1d5af0',
+        },
+      },
+    }),
+    [dark]
+  )
 
   return (
     <div style={styles.container}>
@@ -125,7 +131,9 @@ Global theming through CSS custom properties in `globals.css`:
 body {
   background-color: var(--bg);
   color: var(--text);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 ```
 
@@ -164,6 +172,55 @@ npm run format       # Prettier formatting
 npm run test         # Run Vitest test suite
 ```
 
+### Code Quality Tools
+
+#### **Husky Pre-commit Hooks**
+
+Automated code quality enforcement before commits:
+
+```bash
+# Automatically runs on git commit
+npm run lint         # ESLint validation
+npm run format       # Prettier formatting
+npm run test         # Test suite execution
+```
+
+#### **ESLint Configuration**
+
+Modern ESLint v9 setup with TypeScript and React support:
+
+- **@typescript-eslint/parser** - TypeScript parsing
+- **eslint-plugin-react-hooks** - React Hooks rules
+- **eslint-plugin-react-refresh** - Vite HMR compatibility
+- **eslint-config-prettier** - Prettier integration
+
+#### **Absolute Path Mappings**
+
+Clean imports with `@` prefix for better maintainability:
+
+```tsx
+// Instead of relative imports
+import { useTheme } from '../../../hooks/useTheme'
+import { Button } from '../../components/Button'
+
+// Use absolute imports
+import { useTheme } from '@/hooks/useTheme'
+import { Button } from '@/components/Button'
+```
+
+**Available mappings:**
+
+- `@/*` - Root src directory
+- `@/components/*` - UI components
+- `@/hooks/*` - Custom hooks
+- `@/lib/*` - Utilities and helpers
+- `@/config/*` - Configuration files
+- `@/data/*` - Static data
+- `@/routes/*` - Page components
+- `@/styles/*` - Style files
+- `@/theme/*` - Theme configuration
+- `@/assets/*` - Images and static assets
+
 ### Testing Strategy
 
 The project includes comprehensive tests covering:
@@ -187,6 +244,7 @@ npm test -- --coverage
 ## Design System
 
 ### Color Palette
+
 ```tsx
 // Brand Colors
 brand: {
@@ -214,12 +272,14 @@ light: {
 ```
 
 ### Typography Scale
+
 - **Hero**: 3rem (mobile) → 4rem (desktop), weight: 700
 - **Headings**: 1.5rem - 2rem, weight: 600
 - **Body**: 1.125rem, line-height: 1.6
 - **Small**: 0.875rem
 
 ### Spacing System
+
 Consistent 8px-based spacing throughout the application.
 
 ## Customization
@@ -234,15 +294,18 @@ import { useMemo } from 'react'
 
 export function NewComponent() {
   const { dark } = useTheme()
-  
-  const styles = useMemo(() => ({
-    root: {
-      backgroundColor: dark ? '#1f2937' : '#f8fafc',
-      color: dark ? '#ffffff' : '#1f2937',
-      // Add your styles here
-    },
-  }), [dark])
-  
+
+  const styles = useMemo(
+    () => ({
+      root: {
+        backgroundColor: dark ? '#1f2937' : '#f8fafc',
+        color: dark ? '#ffffff' : '#1f2937',
+        // Add your styles here
+      },
+    }),
+    [dark]
+  )
+
   return <div style={styles.root}>Your content</div>
 }
 ```
@@ -254,6 +317,7 @@ Update the theme logic in `hooks/useTheme.ts` and CSS variables in `styles/globa
 ## Dependencies
 
 ### Core Dependencies
+
 - **react** (18.3.1) - React library with concurrent features
 - **react-dom** (18.3.1) - React DOM renderer
 - **react-router-dom** (6.26.1) - Client-side routing
@@ -261,6 +325,7 @@ Update the theme logic in `hooks/useTheme.ts` and CSS variables in `styles/globa
 - **lucide-react** (0.441.0) - Icon library
 
 ### Development Dependencies
+
 - **typescript** (5.5.4) - Type checking
 - **vite** (5.4.2) - Build tool and dev server
 - **vitest** (2.0.5) - Testing framework
@@ -271,6 +336,7 @@ Update the theme logic in `hooks/useTheme.ts` and CSS variables in `styles/globa
 ## Deployment
 
 ### Vercel (Recommended)
+
 ```bash
 # Connect your repo to Vercel
 # Framework: Vite
@@ -279,12 +345,14 @@ Update the theme logic in `hooks/useTheme.ts` and CSS variables in `styles/globa
 ```
 
 ### Netlify
+
 ```bash
 # Build command: npm run build
 # Publish directory: dist
 ```
 
 ### Manual Deployment
+
 ```bash
 npm run build
 # Upload the 'dist' folder to your hosting service
@@ -312,12 +380,14 @@ All tests pass and provide confidence in the application's reliability.
 ## Architecture Decisions
 
 ### Why CSS-in-JS with Inline Styles?
+
 - **Type Safety**: Full TypeScript integration
 - **Theme Integration**: Direct access to theme variables
 - **Performance**: No CSS parsing overhead
 - **Maintainability**: Styles colocated with components
 
 ### Key Benefits
+
 1. **Developer Experience**: Fast development with HMR and TypeScript
 2. **Theme Consistency**: Unified theming across all components
 3. **Performance**: Optimized builds and runtime efficiency
@@ -325,7 +395,6 @@ All tests pass and provide confidence in the application's reliability.
 5. **Accessibility**: Proper semantic HTML and ARIA attributes
 
 ---
-
 
 ## Contributing
 
@@ -338,6 +407,7 @@ All tests pass and provide confidence in the application's reliability.
 ## Changelog
 
 ### v1.0.0 (Current)
+
 - Initial release with React 18 + TypeScript
 - Complete dark/light theme system
 - Raycast-inspired design
