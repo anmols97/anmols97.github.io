@@ -19,6 +19,7 @@ Visit `http://localhost:5173` to view your portfolio.
 - **Vite** for blazing-fast development and building
 - **React Router v6** for client-side navigation
 - **Framer Motion** for smooth animations
+- **React Intl** for internationalization support
 - **Comprehensive testing** with Vitest and Testing Library
 
 ### **Advanced Theme System**
