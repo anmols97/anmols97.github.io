@@ -73,16 +73,16 @@ describe('App Integration Tests', () => {
     expect(themeButton).toBeInTheDocument()
   })
 
-  it('renders theme debug component in development', () => {
+  it('renders without crashing and has proper structure', () => {
     render(
       <MemoryRouter initialEntries={['/']}>
         <App />
       </MemoryRouter>
     )
 
-    // Check if theme debug is present (shows current theme)
-    const themeDebug = screen.getByText(/Theme:/i)
-    expect(themeDebug).toBeInTheDocument()
-    expect(themeDebug.textContent).toMatch(/Theme: (DARK|LIGHT)/)
+    // Verify the app renders with proper layout structure
+    expect(document.querySelector('.min-h-screen')).toBeInTheDocument()
+    expect(screen.getByRole('banner')).toBeInTheDocument() // header
+    expect(screen.getByRole('main')).toBeInTheDocument() // main content
   })
 })
