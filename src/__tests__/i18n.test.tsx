@@ -1,4 +1,5 @@
-import { screen, test, describe, expect } from '@testing-library/react'
+import { screen } from '@testing-library/react'
+import { test, describe, expect } from 'vitest'
 import { IntlProvider } from 'react-intl'
 import { render } from './test-utils'
 import { Navbar } from '@/components/Navbar'
@@ -10,7 +11,7 @@ import { messages } from '@/i18n'
 describe('Internationalization', () => {
   test('renders English navigation labels', () => {
     render(<Navbar />)
-    
+
     expect(screen.getByText('Projects')).toBeInTheDocument()
     expect(screen.getByText('About')).toBeInTheDocument()
     expect(screen.getByText('Blog')).toBeInTheDocument()
@@ -19,7 +20,7 @@ describe('Internationalization', () => {
 
   test('renders hero section in English', () => {
     render(<HeroSimple />)
-    
+
     expect(screen.getByText('Your shortcut to')).toBeInTheDocument()
     expect(screen.getByText('everything.')).toBeInTheDocument()
     expect(screen.getByText(/Welcome to my digital workspace/)).toBeInTheDocument()
@@ -29,7 +30,7 @@ describe('Internationalization', () => {
 
   test('renders feature section with translated content', () => {
     render(<FeatureSection />)
-    
+
     expect(screen.getByText('Command-first UX')).toBeInTheDocument()
     expect(screen.getByText('Performance built-in')).toBeInTheDocument()
     expect(screen.getByText('Production-safe')).toBeInTheDocument()
@@ -38,7 +39,7 @@ describe('Internationalization', () => {
 
   test('renders CTA section with translated content', () => {
     render(<CTASection />)
-    
+
     expect(screen.getByText('Have an opportunity in mind?')).toBeInTheDocument()
     expect(screen.getByText(/I love shipping usable software/)).toBeInTheDocument()
     expect(screen.getByText('Get in touch')).toBeInTheDocument()
@@ -47,7 +48,7 @@ describe('Internationalization', () => {
   test('all message keys exist in en.json', () => {
     const requiredKeys = [
       'navigation.projects',
-      'navigation.about', 
+      'navigation.about',
       'navigation.blog',
       'navigation.contact',
       'hero.title',
@@ -67,10 +68,10 @@ describe('Internationalization', () => {
       'accessibility.toggleTheme',
       'accessibility.github',
       'accessibility.linkedin',
-      'accessibility.email'
+      'accessibility.email',
     ]
 
-    requiredKeys.forEach(key => {
+    requiredKeys.forEach((key) => {
       expect(messages.en).toHaveProperty(key)
       expect(typeof messages.en[key as keyof typeof messages.en]).toBe('string')
     })
@@ -82,7 +83,7 @@ describe('Internationalization', () => {
         <div data-testid="test-content">Test</div>
       </IntlProvider>
     )
-    
+
     expect(screen.getByTestId('test-content')).toBeInTheDocument()
   })
 })
