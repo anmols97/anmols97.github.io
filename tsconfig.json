@@ -12,6 +12,18 @@
     "jsx": "react-jsx",
     "strict": true,
     "baseUrl": "./src",
+    "paths": {
+      "@/*": ["./*"],
+      "@/components/*": ["./components/*"],
+      "@/hooks/*": ["./hooks/*"],
+      "@/lib/*": ["./lib/*"],
+      "@/config/*": ["./config/*"],
+      "@/data/*": ["./data/*"],
+      "@/routes/*": ["./routes/*"],
+      "@/styles/*": ["./styles/*"],
+      "@/theme/*": ["./theme/*"],
+      "@/assets/*": ["./assets/*"]
+    },
     "types": ["vitest/globals", "@testing-library/jest-dom"]
   },
   "include": ["src"],
