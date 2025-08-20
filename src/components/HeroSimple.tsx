@@ -24,17 +24,6 @@ export function HeroSimple() {
         position: 'relative' as const,
         zIndex: 1,
       },
-      title: {
-        fontSize: '3rem',
-        fontWeight: 700,
-        letterSpacing: '-0.025em',
-        lineHeight: '1.1',
-        color: dark ? '#ffffff' : '#1f2937',
-        margin: 0,
-      },
-      titleLarge: {
-        fontSize: '4rem',
-      },
       highlight: {
         color: '#3770ff',
       },
@@ -68,7 +57,6 @@ export function HeroSimple() {
         padding: '12px 24px',
         borderRadius: '12px',
         backgroundColor: 'transparent',
-        color: dark ? '#ffffff' : '#1f2937',
         textDecoration: 'none',
         fontWeight: 500,
         transition: 'all 0.3s ease',
@@ -87,12 +75,16 @@ export function HeroSimple() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            style={
-              window.innerWidth >= 768 ? { ...styles.title, ...styles.titleLarge } : styles.title
-            }
+            className="text-primary"
+            style={{
+              fontSize: window.innerWidth >= 768 ? '4rem' : '3rem',
+              fontWeight: 700,
+              letterSpacing: '-0.025em',
+              lineHeight: '1.1',
+              margin: 0
+            }}
           >
-            <span style={{ color: 'inherit' }}>Your shortcut to </span>
-            <span style={styles.highlight}>everything.</span>
+            Your shortcut to <span style={styles.highlight}>everything.</span>
           </motion.h1>
           <p style={styles.description}>
             Welcome to my digital workspace. I build powerful, intuitive software that makes complex
@@ -102,7 +94,7 @@ export function HeroSimple() {
             <Link to="/projects" style={styles.primaryButton}>
               View Projects
             </Link>
-            <a href="https://github.com/your-username" style={styles.secondaryButton}>
+            <a href="https://github.com/your-username" style={styles.secondaryButton} className="text-primary">
               GitHub
             </a>
           </div>

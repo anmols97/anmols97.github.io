@@ -6,12 +6,14 @@
   --bg: #0b0f1a;
   --panel: #0e1525;
   --muted: #9fb0d9;
+  --text: #ffffff;
 }
 
 :root:not(.dark) {
   --bg: #ffffff;
   --panel: #f8fafc;
   --muted: #64748b;
+  --text: #1f2937;
 }
 
 html,
@@ -53,6 +55,10 @@ body {
 
 .text-muted {
   color: var(--muted);
+}
+
+.text-primary {
+  color: var(--text);
 }
 
 .bg-glow {
