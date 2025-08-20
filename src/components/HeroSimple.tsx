@@ -81,7 +81,7 @@ export function HeroSimple() {
               fontWeight: 700,
               letterSpacing: '-0.025em',
               lineHeight: '1.1',
-              margin: 0
+              margin: 0,
             }}
           >
             Your shortcut to <span style={styles.highlight}>everything.</span>
@@ -94,7 +94,11 @@ export function HeroSimple() {
             <Link to="/projects" style={styles.primaryButton}>
               View Projects
             </Link>
-            <a href="https://github.com/your-username" style={styles.secondaryButton} className="text-primary">
+            <a
+              href="https://github.com/your-username"
+              style={styles.secondaryButton}
+              className="text-primary"
+            >
               GitHub
             </a>
           </div>
