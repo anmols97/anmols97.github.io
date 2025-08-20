@@ -91,7 +91,8 @@ export function HeroSimple() {
               window.innerWidth >= 768 ? { ...styles.title, ...styles.titleLarge } : styles.title
             }
           >
-            Your shortcut to <span style={styles.highlight}>everything.</span>
+            <span style={{ color: 'inherit' }}>Your shortcut to </span>
+            <span style={styles.highlight}>everything.</span>
           </motion.h1>
           <p style={styles.description}>
             Welcome to my digital workspace. I build powerful, intuitive software that makes complex
