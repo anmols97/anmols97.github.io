@@ -1,0 +1,64 @@
+# Rayfolio — Raycast‑inspired Portfolio (React + TypeScript + Vite)
+
+A clean, fast, senior‑engineer‑friendly portfolio starter inspired by [raycast.com]. It uses React 18, Vite, Tailwind, strict TypeScript, routing, SEO, tests, and a pragmatic component architecture.
+
+## Quickstart
+
+```bash
+npm i
+npm run dev
+```
+
+Build and preview:
+
+```bash
+npm run build
+npm run preview
+```
+
+## What’s inside
+
+- **Vite + React 18 + TypeScript 5**
+- **TailwindCSS** (dark mode via class), small design system
+- **React Router** (basic routes: Home, Projects, About, Blog, Contact, 404)
+- **SEO** via `react-helmet-async`
+- **Testing** via Vitest + Testing Library
+- **ESLint + Prettier** strict config
+- **Framer Motion** for tasteful motion (Hero)
+- **Lucide Icons**
+
+> A minimal `package-lock.json` is included for reproducibility and will be fully resolved when you run `npm i`.
+
+## Customize
+
+- Update `src/config/site.config.ts` (name, description, links).
+- Add/edit projects in `src/data/projects.ts`.
+- Tweak styles in `src/styles/globals.css` and `tailwind.config.ts`.
+- Replace logos and favicon in `src/assets` and `public/`.
+
+## Deploy
+
+Any static host works (Vercel, Netlify, GitHub Pages). Example (Vercel):
+
+1. Push to a Git repo.
+2. Import the repo in Vercel, set Framework = **Vite**.
+3. Build command: `npm run build`, Output dir: `dist/`.
+
+## Architecture Notes
+
+- **Components** are small and composable (`Container`, `Navbar`, cards, sections).
+- **Routes** stay thin—fetch or prefetch data in route-level code if needed.
+- **Styling** uses Tailwind utilities plus a couple of custom CSS tokens.
+- **SEO**: `Seo` component centralizes metadata per route.
+- **Accessibility**: semantic HTML, visible focus styles, keyboard-first navigation strategy.
+
+## Roadmap Ideas
+
+- Command Palette (Ctrl/Cmd + K) to navigate the site.
+- MDX‑powered blog.
+- Project filtering + search.
+- Light/dark theme persisted (already supported).
+
+---
+
+MIT License

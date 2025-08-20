@@ -15,8 +15,8 @@ export function Hero() {
           Your shortcut to <span className="text-brand-400">everything.</span>
         </motion.h1>
         <p className="mt-6 text-lg text-muted">
-          Welcome to my digital workspace. I build powerful, intuitive software
-          that makes complex tasks feel effortless—just like your favorite tools.
+          Welcome to my digital workspace. I build powerful, intuitive software that makes complex
+          tasks feel effortless—just like your favorite tools.
         </p>
         <div className="mt-8 flex items-center justify-center gap-4">
           <Link

@@ -10,7 +10,10 @@ export function CTASection() {
           I love shipping usable software fast—especially where DX and UX both matter.
         </p>
         <div className="mt-6">
-          <Link to="/contact" className="px-5 py-3 rounded-xl bg-brand-500 text-white hover:bg-brand-600 transition-colors font-medium">
+          <Link
+            to="/contact"
+            className="px-5 py-3 rounded-xl bg-brand-500 text-white hover:bg-brand-600 transition-colors font-medium"
+          >
             Get in touch
           </Link>
         </div>

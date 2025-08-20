@@ -11,9 +11,7 @@ import { Layout } from '../components/Layout'
 const renderWithProviders = (component: React.ReactElement) => {
   return render(
     <ThemeProvider>
-      <MemoryRouter>
-        {component}
-      </MemoryRouter>
+      <MemoryRouter>{component}</MemoryRouter>
     </ThemeProvider>
   )
 }
@@ -21,7 +19,7 @@ const renderWithProviders = (component: React.ReactElement) => {
 describe('HeroSimple Component', () => {
   it('renders hero title and description', () => {
     renderWithProviders(<HeroSimple />)
-    
+
     expect(screen.getByText(/Your shortcut to/i)).toBeInTheDocument()
     expect(screen.getByText(/everything/i)).toBeInTheDocument()
     expect(screen.getByText(/Welcome to my digital workspace/i)).toBeInTheDocument()
@@ -29,17 +27,17 @@ describe('HeroSimple Component', () => {
 
   it('renders action buttons', () => {
     renderWithProviders(<HeroSimple />)
-    
+
     expect(screen.getByText(/View Projects/i)).toBeInTheDocument()
     expect(screen.getByText(/GitHub/i)).toBeInTheDocument()
   })
 
   it('has correct links', () => {
     renderWithProviders(<HeroSimple />)
-    
+
     const projectsLink = screen.getByText(/View Projects/i).closest('a')
     const githubLink = screen.getByText(/GitHub/i).closest('a')
-    
+
     expect(projectsLink).toHaveAttribute('href', '/projects')
     expect(githubLink).toHaveAttribute('href', 'https://github.com/your-username')
   })
@@ -48,7 +46,7 @@ describe('HeroSimple Component', () => {
 describe('FeatureSection Component', () => {
   it('renders all feature cards', () => {
     renderWithProviders(<FeatureSection />)
-    
+
     expect(screen.getByText(/Command-first UX/i)).toBeInTheDocument()
     expect(screen.getByText(/Performance built-in/i)).toBeInTheDocument()
     expect(screen.getByText(/Production-safe/i)).toBeInTheDocument()
@@ -56,7 +54,7 @@ describe('FeatureSection Component', () => {
 
   it('renders feature descriptions', () => {
     renderWithProviders(<FeatureSection />)
-    
+
     expect(screen.getByText(/keyboard-centric design/i)).toBeInTheDocument()
     expect(screen.getByText(/Vite \+ React 18/i)).toBeInTheDocument()
     expect(screen.getByText(/Strict TypeScript/i)).toBeInTheDocument()
@@ -66,7 +64,7 @@ describe('FeatureSection Component', () => {
 describe('LogoCloud Component', () => {
   it('renders technology logos', () => {
     renderWithProviders(<LogoCloud />)
-    
+
     expect(screen.getByText(/React/i)).toBeInTheDocument()
     expect(screen.getByText(/TypeScript/i)).toBeInTheDocument()
     expect(screen.getByText(/Tailwind/i)).toBeInTheDocument()
@@ -77,7 +75,7 @@ describe('LogoCloud Component', () => {
 describe('CTASection Component', () => {
   it('renders call to action content', () => {
     renderWithProviders(<CTASection />)
-    
+
     expect(screen.getByText(/Have an opportunity in mind/i)).toBeInTheDocument()
     expect(screen.getByText(/Get in touch/i)).toBeInTheDocument()
   })
@@ -90,7 +88,7 @@ describe('Layout Component', () => {
         <div data-testid="test-content">Test Content</div>
       </Layout>
     )
-    
+
     expect(screen.getByTestId('test-content')).toBeInTheDocument()
     expect(screen.getByText(/Anmol Singh/i)).toBeInTheDocument() // From navbar
   })
@@ -101,10 +99,10 @@ describe('Layout Component', () => {
         <div>Content</div>
       </Layout>
     )
-    
+
     // Check for navbar elements
     expect(screen.getByText(/Anmol Singh/i)).toBeInTheDocument()
-    
+
     // Check for footer elements
     expect(screen.getByText(/Built with/i)).toBeInTheDocument()
   })

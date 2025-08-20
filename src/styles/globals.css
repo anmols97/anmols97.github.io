@@ -14,14 +14,18 @@
   --muted: #64748b;
 }
 
-html, body, #root { height: 100%; }
+html,
+body,
+#root {
+  height: 100%;
+}
 
 body {
   background-color: var(--bg);
   color: white;
-  background-image: 
-    linear-gradient(180deg, rgba(55,112,255,0.08), rgba(0,0,0,0) 30%),
-    radial-gradient(600px circle at 50% -10%, rgba(55,112,255,0.25), transparent 40%);
+  background-image:
+    linear-gradient(180deg, rgba(55, 112, 255, 0.08), rgba(0, 0, 0, 0) 30%),
+    radial-gradient(600px circle at 50% -10%, rgba(55, 112, 255, 0.25), transparent 40%);
   background-repeat: no-repeat;
   transition: background-color 0.3s ease;
 }
@@ -29,9 +33,9 @@ body {
 :root:not(.dark) body {
   color: #1f2937;
   background-color: #f8fafc;
-  background-image: 
-    linear-gradient(180deg, rgba(59,130,246,0.03), rgba(248,250,252,1) 30%),
-    radial-gradient(600px circle at 50% -10%, rgba(59,130,246,0.05), transparent 40%);
+  background-image:
+    linear-gradient(180deg, rgba(59, 130, 246, 0.03), rgba(248, 250, 252, 1) 30%),
+    radial-gradient(600px circle at 50% -10%, rgba(59, 130, 246, 0.05), transparent 40%);
 }
 
 .section {
@@ -47,14 +51,24 @@ body {
   @apply bg-white/90 border-gray-200 shadow-sm;
 }
 
-.text-muted { color: var(--muted); }
+.text-muted {
+  color: var(--muted);
+}
 
 .bg-glow {
-  background-image: radial-gradient(800px circle at 50% -20%, rgba(55,112,255,0.22), transparent 40%);
+  background-image: radial-gradient(
+    800px circle at 50% -20%,
+    rgba(55, 112, 255, 0.22),
+    transparent 40%
+  );
 }
 
 :root:not(.dark) .bg-glow {
-  background-image: radial-gradient(800px circle at 50% -20%, rgba(59,130,246,0.08), transparent 40%);
+  background-image: radial-gradient(
+    800px circle at 50% -20%,
+    rgba(59, 130, 246, 0.08),
+    transparent 40%
+  );
 }
 
 /* LogoCloud light mode styles */

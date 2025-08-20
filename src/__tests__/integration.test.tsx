@@ -10,7 +10,7 @@ describe('App Integration Tests', () => {
         <App />
       </MemoryRouter>
     )
-    
+
     // Check for homepage content
     expect(screen.getByText(/Your shortcut to/i)).toBeInTheDocument()
     expect(screen.getByText(/everything/i)).toBeInTheDocument()
@@ -23,7 +23,7 @@ describe('App Integration Tests', () => {
         <App />
       </MemoryRouter>
     )
-    
+
     expect(screen.getByText(/404 - Page not found/i)).toBeInTheDocument()
   })
 
@@ -33,7 +33,7 @@ describe('App Integration Tests', () => {
         <App />
       </MemoryRouter>
     )
-    
+
     // Check for each section
     expect(screen.getByText(/Your shortcut to/i)).toBeInTheDocument() // Hero
     expect(screen.getByText(/Oracle/i)).toBeInTheDocument() // LogoCloud - Oracle only appears in logo cloud
@@ -47,12 +47,12 @@ describe('App Integration Tests', () => {
         <App />
       </MemoryRouter>
     )
-    
+
     // Navigation
     expect(screen.getByText(/Anmol Singh/i)).toBeInTheDocument()
     expect(screen.getAllByText(/Projects/i)).toHaveLength(2) // Navbar and hero button
     expect(screen.getByText(/About/i)).toBeInTheDocument()
-    
+
     // Footer
     expect(screen.getByText(/Built with/i)).toBeInTheDocument()
   })
@@ -63,11 +63,11 @@ describe('App Integration Tests', () => {
         <App />
       </MemoryRouter>
     )
-    
+
     // Find theme toggle button
     const themeButton = screen.getByRole('button', { name: /toggle theme/i })
     expect(themeButton).toBeInTheDocument()
-    
+
     // Click should not throw error (theme switching is tested in useTheme tests)
     fireEvent.click(themeButton)
     expect(themeButton).toBeInTheDocument()
@@ -79,7 +79,7 @@ describe('App Integration Tests', () => {
         <App />
       </MemoryRouter>
     )
-    
+
     // Check if theme debug is present (shows current theme)
     const themeDebug = screen.getByText(/Theme:/i)
     expect(themeDebug).toBeInTheDocument()

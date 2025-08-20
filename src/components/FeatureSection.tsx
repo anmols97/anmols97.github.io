@@ -5,18 +5,18 @@ const features = [
   {
     title: 'Command-first UX',
     desc: 'A keyboard-centric design inspired by Raycast’s command palette. Fast, predictable, delightful.',
-    icon: Command
+    icon: Command,
   },
   {
     title: 'Performance built-in',
     desc: 'Vite + React 18 + code-splitting + Tailwind. Optimized for CLS, LCP, and TTI out of the box.',
-    icon: Zap
+    icon: Zap,
   },
   {
     title: 'Production-safe',
     desc: 'Strict TypeScript, ESLint, Prettier, and tests. CI-ready project structure and environment separation.',
-    icon: ShieldCheck
-  }
+    icon: ShieldCheck,
+  },
 ]
 
 export function FeatureSection() {

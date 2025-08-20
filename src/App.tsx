@@ -24,7 +24,14 @@ export default function App() {
     <ThemeProvider>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="*" element={<div style={{backgroundColor: 'red', color: 'white', padding: '20px'}}>404 - Page not found</div>} />
+        <Route
+          path="*"
+          element={
+            <div style={{ backgroundColor: 'red', color: 'white', padding: '20px' }}>
+              404 - Page not found
+            </div>
+          }
+        />
       </Routes>
     </ThemeProvider>
   )
