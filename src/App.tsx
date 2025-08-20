@@ -5,12 +5,10 @@ import { HeroSimple } from './components/HeroSimple'
 import { LogoCloud } from './components/LogoCloud'
 import { FeatureSection } from './components/FeatureSection'
 import { CTASection } from './components/CTASection'
-import { ThemeDebug } from './components/ThemeDebug'
 
 function HomePage() {
   return (
     <Layout>
-      <ThemeDebug />
       <HeroSimple />
       <LogoCloud />
       <FeatureSection />

@@ -48,8 +48,7 @@ src/
 │   ├── FeatureSection.tsx   # Feature cards
 │   ├── LogoCloud.tsx    # Technology showcase
 │   ├── CTASection.tsx   # Call-to-action section
-│   ├── ThemeProvider.tsx    # Theme context provider
-│   └── ThemeDebug.tsx   # Development theme indicator
+│   └── ThemeProvider.tsx    # Theme context provider
 ├── hooks/               # Custom React hooks
 │   └── useTheme.ts      # Theme management hook
 ├── routes/              # Route components
