@@ -1,6 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { render, screen } from '@testing-library/react'
-import { MemoryRouter } from 'react-router-dom'
+import { render, screen } from './test-utils'
 import { ThemeProvider } from '../components/ThemeProvider'
 import { HeroSimple } from '../components/HeroSimple'
 import { FeatureSection } from '../components/FeatureSection'
@@ -11,7 +10,7 @@ import { Layout } from '../components/Layout'
 const renderWithProviders = (component: React.ReactElement) => {
   return render(
     <ThemeProvider>
-      <MemoryRouter>{component}</MemoryRouter>
+      {component}
     </ThemeProvider>
   )
 }

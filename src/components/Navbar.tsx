@@ -2,18 +2,20 @@ import { Link, NavLink } from 'react-router-dom'
 import { Container } from './Container'
 import { useTheme } from '../hooks/useTheme'
 import { site } from '../config/site.config'
+import { FormattedMessage, useIntl } from 'react-intl'
 
 import { Github, Linkedin, Mail, Moon, Sun, Code } from 'lucide-react'
 
 const nav = [
-  { to: '/projects', label: 'Projects' },
-  { to: '/about', label: 'About' },
-  { to: '/blog', label: 'Blog' },
-  { to: '/contact', label: 'Contact' },
+  { to: '/projects', labelId: 'navigation.projects' },
+  { to: '/about', labelId: 'navigation.about' },
+  { to: '/blog', labelId: 'navigation.blog' },
+  { to: '/contact', labelId: 'navigation.contact' },
 ]
 
 export function Navbar() {
   const { dark, setDark } = useTheme()
+  const intl = useIntl()
 
   return (
     <header
@@ -40,7 +42,7 @@ export function Navbar() {
                 }`
               }
             >
-              {n.label}
+              <FormattedMessage id={n.labelId} />
             </NavLink>
           ))}
         </nav>
@@ -49,29 +51,29 @@ export function Navbar() {
           <a
             className={`p-2 rounded-lg transition-colors ${dark ? 'hover:bg-white/5' : 'hover:bg-gray-100'}`}
             href={site.social.github}
-            aria-label="GitHub"
+            aria-label={intl.formatMessage({id: 'accessibility.github'})}
           >
             <Github size={18} />
           </a>
           <a
             className={`p-2 rounded-lg transition-colors ${dark ? 'hover:bg-white/5' : 'hover:bg-gray-100'}`}
             href={site.social.linkedin}
-            aria-label="LinkedIn"
+            aria-label={intl.formatMessage({id: 'accessibility.linkedin'})}
           >
             <Linkedin size={18} />
           </a>
           <a
             className={`p-2 rounded-lg transition-colors ${dark ? 'hover:bg-white/5' : 'hover:bg-gray-100'}`}
             href={site.social.email}
-            aria-label="Email"
+            aria-label={intl.formatMessage({id: 'accessibility.email'})}
           >
             <Mail size={18} />
           </a>
           <button
             onClick={() => setDark(!dark)}
             className={`p-2 rounded-lg transition-colors ${dark ? 'hover:bg-white/5' : 'hover:bg-gray-100'}`}
-            aria-label="Toggle theme"
-            title="Toggle theme"
+            aria-label={intl.formatMessage({id: 'accessibility.toggleTheme'})}
+            title={intl.formatMessage({id: 'accessibility.toggleTheme'})}
           >
             {dark ? <Sun size={18} /> : <Moon size={18} />}
           </button>

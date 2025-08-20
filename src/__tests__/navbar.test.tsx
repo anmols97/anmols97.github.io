@@ -1,6 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { render, screen } from '@testing-library/react'
-import { MemoryRouter } from 'react-router-dom'
+import { render, screen } from './test-utils'
 import { Navbar } from '../components/Navbar'
 import { ThemeProvider } from '../components/ThemeProvider'
 
@@ -8,9 +7,7 @@ describe('Navbar', () => {
   it('renders the author name', () => {
     render(
       <ThemeProvider>
-        <MemoryRouter>
-          <Navbar />
-        </MemoryRouter>
+        <Navbar />
       </ThemeProvider>
     )
     expect(screen.getByText(/Anmol Singh/i)).toBeInTheDocument()
@@ -19,9 +16,7 @@ describe('Navbar', () => {
   it('renders navigation links', () => {
     render(
       <ThemeProvider>
-        <MemoryRouter>
-          <Navbar />
-        </MemoryRouter>
+        <Navbar />
       </ThemeProvider>
     )
     expect(screen.getByText(/Projects/i)).toBeInTheDocument()
@@ -33,9 +28,7 @@ describe('Navbar', () => {
   it('renders theme toggle button', () => {
     render(
       <ThemeProvider>
-        <MemoryRouter>
-          <Navbar />
-        </MemoryRouter>
+        <Navbar />
       </ThemeProvider>
     )
     // Check for either sun or moon icon

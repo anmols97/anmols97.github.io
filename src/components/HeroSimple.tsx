@@ -3,6 +3,7 @@ import { Container } from './Container'
 import { Link } from 'react-router-dom'
 import { useTheme } from '../hooks/useTheme'
 import { useMemo } from 'react'
+import { FormattedMessage } from 'react-intl'
 
 export function HeroSimple() {
   const { dark } = useTheme()
@@ -84,22 +85,21 @@ export function HeroSimple() {
               margin: 0,
             }}
           >
-            Your shortcut to <span style={styles.highlight}>everything.</span>
+            <FormattedMessage id="hero.title" /> <span style={styles.highlight}><FormattedMessage id="hero.titleHighlight" /></span>
           </motion.h1>
           <p style={styles.description}>
-            Welcome to my digital workspace. I build powerful, intuitive software that makes complex
-            tasks feel effortless—just like your favorite tools.
+            <FormattedMessage id="hero.description" />
           </p>
           <div style={styles.actions}>
             <Link to="/projects" style={styles.primaryButton}>
-              View Projects
+              <FormattedMessage id="hero.viewProjects" />
             </Link>
             <a
               href="https://github.com/your-username"
               style={styles.secondaryButton}
               className="text-primary"
             >
-              GitHub
+              <FormattedMessage id="hero.github" />
             </a>
           </div>
         </div>
