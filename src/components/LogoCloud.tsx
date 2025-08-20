@@ -8,7 +8,7 @@ export function LogoCloud() {
     { key: 'tailwind', messageId: 'logoCloud.tailwind' },
     { key: 'vite', messageId: 'logoCloud.vite' },
     { key: 'azure', messageId: 'logoCloud.azure' },
-    { key: 'oracle', messageId: 'logoCloud.oracle' }
+    { key: 'oracle', messageId: 'logoCloud.oracle' },
   ]
   return (
     <div className="py-10 border-y logo-cloud-border border-white/10">

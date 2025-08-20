@@ -8,11 +8,7 @@ import { CTASection } from '../components/CTASection'
 import { Layout } from '../components/Layout'
 
 const renderWithProviders = (component: React.ReactElement) => {
-  return render(
-    <ThemeProvider>
-      {component}
-    </ThemeProvider>
-  )
+  return render(<ThemeProvider>{component}</ThemeProvider>)
 }
 
 describe('HeroSimple Component', () => {

@@ -51,29 +51,29 @@ export function Navbar() {
           <a
             className={`p-2 rounded-lg transition-colors ${dark ? 'hover:bg-white/5' : 'hover:bg-gray-100'}`}
             href={site.social.github}
-            aria-label={intl.formatMessage({id: 'accessibility.github'})}
+            aria-label={intl.formatMessage({ id: 'accessibility.github' })}
           >
             <Github size={18} />
           </a>
           <a
             className={`p-2 rounded-lg transition-colors ${dark ? 'hover:bg-white/5' : 'hover:bg-gray-100'}`}
             href={site.social.linkedin}
-            aria-label={intl.formatMessage({id: 'accessibility.linkedin'})}
+            aria-label={intl.formatMessage({ id: 'accessibility.linkedin' })}
           >
             <Linkedin size={18} />
           </a>
           <a
             className={`p-2 rounded-lg transition-colors ${dark ? 'hover:bg-white/5' : 'hover:bg-gray-100'}`}
             href={site.social.email}
-            aria-label={intl.formatMessage({id: 'accessibility.email'})}
+            aria-label={intl.formatMessage({ id: 'accessibility.email' })}
           >
             <Mail size={18} />
           </a>
           <button
             onClick={() => setDark(!dark)}
             className={`p-2 rounded-lg transition-colors ${dark ? 'hover:bg-white/5' : 'hover:bg-gray-100'}`}
-            aria-label={intl.formatMessage({id: 'accessibility.toggleTheme'})}
-            title={intl.formatMessage({id: 'accessibility.toggleTheme'})}
+            aria-label={intl.formatMessage({ id: 'accessibility.toggleTheme' })}
+            title={intl.formatMessage({ id: 'accessibility.toggleTheme' })}
           >
             {dark ? <Sun size={18} /> : <Moon size={18} />}
           </button>

@@ -27,8 +27,12 @@ export function FeatureSection() {
         {features.map((f) => (
           <div key={f.titleId} className="card p-6">
             <f.icon className="mb-4" />
-            <h3 className="text-xl font-semibold"><FormattedMessage id={f.titleId} /></h3>
-            <p className="text-muted mt-2"><FormattedMessage id={f.descId} /></p>
+            <h3 className="text-xl font-semibold">
+              <FormattedMessage id={f.titleId} />
+            </h3>
+            <p className="text-muted mt-2">
+              <FormattedMessage id={f.descId} />
+            </p>
           </div>
         ))}
       </Container>

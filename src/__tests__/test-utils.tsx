@@ -8,9 +8,7 @@ import { messages } from '../i18n'
 export function renderWithProviders(ui: ReactElement) {
   return render(
     <IntlProvider locale="en" messages={messages.en}>
-      <MemoryRouter>
-        {ui}
-      </MemoryRouter>
+      <MemoryRouter>{ui}</MemoryRouter>
     </IntlProvider>
   )
 }

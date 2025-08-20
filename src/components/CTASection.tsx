@@ -6,7 +6,9 @@ export function CTASection() {
   return (
     <section className="section">
       <Container className="card p-8 text-center">
-        <h3 className="text-2xl font-semibold"><FormattedMessage id="cta.title" /></h3>
+        <h3 className="text-2xl font-semibold">
+          <FormattedMessage id="cta.title" />
+        </h3>
         <p className="text-muted mt-2">
           <FormattedMessage id="cta.description" />
         </p>

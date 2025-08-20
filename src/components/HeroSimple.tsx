@@ -85,7 +85,10 @@ export function HeroSimple() {
               margin: 0,
             }}
           >
-            <FormattedMessage id="hero.title" /> <span style={styles.highlight}><FormattedMessage id="hero.titleHighlight" /></span>
+            <FormattedMessage id="hero.title" />{' '}
+            <span style={styles.highlight}>
+              <FormattedMessage id="hero.titleHighlight" />
+            </span>
           </motion.h1>
           <p style={styles.description}>
             <FormattedMessage id="hero.description" />
