@@ -34,7 +34,7 @@ describe('HeroSimple Component', () => {
     const githubLink = screen.getByText(/GitHub/i).closest('a')
 
     expect(projectsLink).toHaveAttribute('href', '/projects')
-    expect(githubLink).toHaveAttribute('href', 'https://github.com/your-username')
+    expect(githubLink).toHaveAttribute('href', 'https://github.com/anmols97')
   })
 })
 

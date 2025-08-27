@@ -98,7 +98,7 @@ export function HeroSimple() {
               <FormattedMessage id="hero.viewProjects" />
             </Link>
             <a
-              href="https://github.com/your-username"
+              href="https://github.com/anmols97"
               style={styles.secondaryButton}
               className="text-primary"
             >

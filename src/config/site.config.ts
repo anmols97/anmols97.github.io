@@ -3,11 +3,10 @@ export const site = {
   author: 'Anmol Singh',
   description:
     'Senior engineer–level portfolio built with React + TypeScript. Clean, fast, and thoughtfully designed.',
-  url: 'https://your-domain.com',
+  url: 'https://anmols97.github.io/',
   social: {
-    github: 'https://github.com/your-username',
-    linkedin: 'https://www.linkedin.com/in/your-handle/',
-    email: 'mailto:you@example.com',
-    x: 'https://x.com/your-handle',
+    github: 'https://github.com/anmols97',
+    linkedin: 'https://www.linkedin.com/in/anmol-s-288078172/',
+    email: 'mailto:anmolsingh2282@gmail.com',
   },
 } as const
