@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "lint": "eslint \"src/**/*.{ts,tsx}\"",
     "format": "prettier --write .",
-    "test": "vitest --environment jsdom --run",
+    "test": "vitest --environment jsdom",
+    "test:ci": "vitest --environment jsdom --run",
     "prepare": "husky"
   },
   "dependencies": {
