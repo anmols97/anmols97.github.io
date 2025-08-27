@@ -1,4 +1,4 @@
-# Rayfolio — Raycast-inspired Portfolio with Modern React
+# Portfolio with Modern React
 
 A production-ready, Raycast-inspired portfolio built with React 18, TypeScript, and modern CSS-in-JS patterns. Features comprehensive theming, dark/light mode switching, and a polished development workflow.
 
