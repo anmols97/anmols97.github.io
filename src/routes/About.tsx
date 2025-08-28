@@ -10,7 +10,9 @@ export default function About() {
       <Seo title="About" path="/about" />
       <section className="section">
         <Container className="prose prose-invert max-w-3xl">
-          <h2><FormattedMessage id="about.title" /></h2>
+          <h2>
+            <FormattedMessage id="about.title" />
+          </h2>
           <p>
             <FormattedMessage id="about.paragraph1" />
           </p>
