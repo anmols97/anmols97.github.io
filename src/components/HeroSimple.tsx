@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { Container } from './Container'
 import { Link } from 'react-router-dom'
-import { useTheme } from '../hooks/useTheme'
+import { useTheme } from './ThemeProvider'
 import { useMemo } from 'react'
 import { FormattedMessage } from 'react-intl'
 
