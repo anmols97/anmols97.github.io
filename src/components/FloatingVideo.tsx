@@ -60,14 +60,14 @@ export function FloatingVideo({ isHeroBackground = false, className = '' }: Floa
         {/* Floating Mute/Unmute Button */}
         <button
           onClick={toggleMute}
-          className={`absolute top-6 right-6 p-4 rounded-full transition-all duration-200 backdrop-blur-md border shadow-xl hover:scale-110 z-10 ${
+          className={`absolute top-4 right-4 sm:top-6 sm:right-6 p-3 sm:p-4 rounded-full transition-all duration-200 backdrop-blur-md border shadow-xl hover:scale-110 z-50 ${
             dark
               ? 'bg-black/30 hover:bg-black/50 text-white border-white/30'
               : 'bg-white/30 hover:bg-white/50 text-gray-900 border-gray-300/30'
           }`}
           aria-label={isMuted ? 'Unmute video' : 'Mute video'}
         >
-          {isMuted ? <VolumeX size={24} /> : <Volume2 size={24} />}
+          {isMuted ? <VolumeX size={20} className="sm:w-6 sm:h-6" /> : <Volume2 size={20} className="sm:w-6 sm:h-6" />}
         </button>
       </div>
     )
