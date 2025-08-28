@@ -31,8 +31,8 @@ describe('Navbar', () => {
         <Navbar />
       </ThemeProvider>
     )
-    // Check for either sun or moon icon
-    const themeButton = screen.getByRole('button')
+    // Check for theme toggle button by aria-label
+    const themeButton = screen.getByLabelText(/toggle theme/i)
     expect(themeButton).toBeInTheDocument()
   })
 })
