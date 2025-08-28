@@ -1,6 +1,7 @@
 import { Layout } from '../components/Layout'
 import { Container } from '../components/Container'
 import { Seo } from '../lib/seo'
+import { Download } from 'lucide-react'
 
 export default function About() {
   return (
@@ -18,6 +19,17 @@ export default function About() {
             This portfolio is designed to be clean and fast, with a minimalist aesthetic and
             keyboard-first UX.
           </p>
+          
+          <div className="not-prose mt-8">
+            <a
+              href="/Anmol_Singh_Resume.pdf"
+              download
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-brand-500 hover:bg-brand-600 text-white font-medium transition-all duration-200 hover:shadow-lg hover:scale-105"
+            >
+              <Download size={18} />
+              Download Resume
+            </a>
+          </div>
         </Container>
       </section>
     </Layout>
