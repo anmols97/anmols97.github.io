@@ -57,13 +57,13 @@ describe('FeatureSection Component', () => {
 })
 
 describe('LogoCloud Component', () => {
-  it('renders technology logos', () => {
+  it('renders expertise areas', () => {
     renderWithProviders(<LogoCloud />)
 
-    expect(screen.getByText(/React/i)).toBeInTheDocument()
-    expect(screen.getByText(/TypeScript/i)).toBeInTheDocument()
-    expect(screen.getByText(/Tailwind/i)).toBeInTheDocument()
-    expect(screen.getByText(/Vite/i)).toBeInTheDocument()
+    expect(screen.getByText(/Full-Stack Development/i)).toBeInTheDocument()
+    expect(screen.getByText(/Cloud Architecture/i)).toBeInTheDocument()
+    expect(screen.getByText(/API Integration/i)).toBeInTheDocument()
+    expect(screen.getByText(/Algorithm Design/i)).toBeInTheDocument()
   })
 })
 

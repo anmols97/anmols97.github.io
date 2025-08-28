@@ -36,7 +36,7 @@ describe('App Integration Tests', () => {
 
     // Check for each section
     expect(screen.getByText(/Your shortcut to/i)).toBeInTheDocument() // Hero
-    expect(screen.getByText(/Oracle/i)).toBeInTheDocument() // LogoCloud - Oracle only appears in logo cloud
+    expect(screen.getByText(/Full-Stack Development/i)).toBeInTheDocument() // LogoCloud - expertise area
     expect(screen.getByText(/Command-first UX/i)).toBeInTheDocument() // FeatureSection
     expect(screen.getByText(/Have an opportunity in mind/i)).toBeInTheDocument() // CTASection
   })

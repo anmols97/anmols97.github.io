@@ -14,7 +14,7 @@ export default function Contact() {
               The best way to reach me is email. I usually respond within a day.
             </p>
             <a
-              href="mailto:you@example.com"
+              href="mailto:anmolsingh2282@gmail.com"
               className="mt-6 inline-block px-5 py-3 rounded-xl bg-white text-[#0b0f1a] font-medium"
             >
               Email me
