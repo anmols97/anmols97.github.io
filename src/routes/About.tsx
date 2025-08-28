@@ -9,21 +9,25 @@ export default function About() {
     <Layout>
       <Seo title="About" path="/about" />
       <section className="section">
-        <Container className="prose prose-invert max-w-3xl">
-          <h2>
-            <FormattedMessage id="about.title" />
-          </h2>
-          <p>
-            <FormattedMessage id="about.paragraph1" />
-          </p>
-          <p>
-            <FormattedMessage id="about.paragraph2" />
-          </p>
-          <p>
-            <FormattedMessage id="about.paragraph3" />
-          </p>
+        <Container className="max-w-4xl">
+          <div className="space-y-8">
+            <h2 className="text-3xl font-bold tracking-tight">
+              <FormattedMessage id="about.title" />
+            </h2>
+            <div className="space-y-6 text-lg leading-relaxed">
+              <p className="text-muted">
+                <FormattedMessage id="about.paragraph1" />
+              </p>
+              <p className="text-muted">
+                <FormattedMessage id="about.paragraph2" />
+              </p>
+              <p className="text-muted">
+                <FormattedMessage id="about.paragraph3" />
+              </p>
+            </div>
+          </div>
 
-          <div className="not-prose mt-8">
+          <div className="mt-10">
             <a
               href="/Anmol_Singh_Resume.pdf"
               download
