@@ -42,17 +42,17 @@ describe('FeatureSection Component', () => {
   it('renders all feature cards', () => {
     renderWithProviders(<FeatureSection />)
 
-    expect(screen.getByText(/Command-first UX/i)).toBeInTheDocument()
-    expect(screen.getByText(/Performance built-in/i)).toBeInTheDocument()
-    expect(screen.getByText(/Production-safe/i)).toBeInTheDocument()
+    expect(screen.getByText(/Systems Integration Expert/i)).toBeInTheDocument()
+    expect(screen.getByText(/Performance & Reliability Engineer/i)).toBeInTheDocument()
+    expect(screen.getByText(/Full-Stack Problem Solver/i)).toBeInTheDocument()
   })
 
   it('renders feature descriptions', () => {
     renderWithProviders(<FeatureSection />)
 
-    expect(screen.getByText(/keyboard-centric design/i)).toBeInTheDocument()
-    expect(screen.getByText(/Vite \+ React 18/i)).toBeInTheDocument()
-    expect(screen.getByText(/Strict TypeScript/i)).toBeInTheDocument()
+    expect(screen.getByText(/Seamlessly connected complex systems/i)).toBeInTheDocument()
+    expect(screen.getByText(/Optimized application performance/i)).toBeInTheDocument()
+    expect(screen.getByText(/architected end-to-end solutions/i)).toBeInTheDocument()
   })
 })
 

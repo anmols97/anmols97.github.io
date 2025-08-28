@@ -31,10 +31,10 @@ describe('Internationalization', () => {
   test('renders feature section with translated content', () => {
     render(<FeatureSection />)
 
-    expect(screen.getByText('Command-first UX')).toBeInTheDocument()
-    expect(screen.getByText('Performance built-in')).toBeInTheDocument()
-    expect(screen.getByText('Production-safe')).toBeInTheDocument()
-    expect(screen.getByText(/keyboard-centric design/)).toBeInTheDocument()
+    expect(screen.getByText('Systems Integration Expert')).toBeInTheDocument()
+    expect(screen.getByText('Performance & Reliability Engineer')).toBeInTheDocument()
+    expect(screen.getByText('Full-Stack Problem Solver')).toBeInTheDocument()
+    expect(screen.getByText(/Seamlessly connected complex systems/)).toBeInTheDocument()
   })
 
   test('renders CTA section with translated content', () => {
@@ -56,12 +56,12 @@ describe('Internationalization', () => {
       'hero.description',
       'hero.viewProjects',
       'hero.github',
-      'features.commandFirst.title',
-      'features.commandFirst.description',
-      'features.performance.title',
-      'features.performance.description',
-      'features.productionSafe.title',
-      'features.productionSafe.description',
+      'features.systemsIntegration.title',
+      'features.systemsIntegration.description',
+      'features.performanceReliability.title',
+      'features.performanceReliability.description',
+      'features.fullstackSolver.title',
+      'features.fullstackSolver.description',
       'cta.title',
       'cta.description',
       'cta.getInTouch',

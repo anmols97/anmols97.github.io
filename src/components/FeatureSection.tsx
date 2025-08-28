@@ -1,22 +1,22 @@
 import { Container } from './Container'
-import { Command, Zap, ShieldCheck } from 'lucide-react'
+import { Network, Zap, Code } from 'lucide-react'
 import { FormattedMessage } from 'react-intl'
 
 const features = [
   {
-    titleId: 'features.commandFirst.title',
-    descId: 'features.commandFirst.description',
-    icon: Command,
+    titleId: 'features.systemsIntegration.title',
+    descId: 'features.systemsIntegration.description',
+    icon: Network,
   },
   {
-    titleId: 'features.performance.title',
-    descId: 'features.performance.description',
+    titleId: 'features.performanceReliability.title',
+    descId: 'features.performanceReliability.description',
     icon: Zap,
   },
   {
-    titleId: 'features.productionSafe.title',
-    descId: 'features.productionSafe.description',
-    icon: ShieldCheck,
+    titleId: 'features.fullstackSolver.title',
+    descId: 'features.fullstackSolver.description',
+    icon: Code,
   },
 ]
 
