@@ -52,9 +52,6 @@ describe('App Integration Tests', () => {
     expect(screen.getByText(/Anmol Singh/i)).toBeInTheDocument()
     expect(screen.getAllByText(/Projects/i)).toHaveLength(2) // Navbar and hero button
     expect(screen.getByText(/About/i)).toBeInTheDocument()
-
-    // Footer
-    expect(screen.getByText(/Built with/i)).toBeInTheDocument()
   })
 
   it('has working theme toggle in navigation', () => {

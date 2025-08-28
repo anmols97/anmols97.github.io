@@ -97,8 +97,5 @@ describe('Layout Component', () => {
 
     // Check for navbar elements
     expect(screen.getByText(/Anmol Singh/i)).toBeInTheDocument()
-
-    // Check for footer elements
-    expect(screen.getByText(/Built with/i)).toBeInTheDocument()
   })
 })

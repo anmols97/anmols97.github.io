@@ -1,6 +1,6 @@
 # Portfolio with Modern React
 
-A production-ready, Raycast-inspired portfolio built with React 18, TypeScript, and modern CSS-in-JS patterns. Features comprehensive theming, dark/light mode switching, and a polished development workflow.
+This portfolio is built with React 18, TypeScript, and modern CSS-in-JS patterns. It features comprehensive theming, dark/light mode switching, and a polished development workflow.
 
 ## Quick Start
 
@@ -30,15 +30,15 @@ Visit `http://localhost:5173` to view your portfolio.
 - Persistent theme state with localStorage
 - Real-time theme switching without page reload
 
-### **Raycast-inspired Design**
+### **Modern Design**
 
-- Clean, command-palette aesthetic
+- Clean, minimalist aesthetic
 - Professional gradient backgrounds
 - Polished micro-interactions
 - Mobile-responsive layout
 - Accessible navigation and controls
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 src/
@@ -410,7 +410,7 @@ All tests pass and provide confidence in the application's reliability.
 
 - Initial release with React 18 + TypeScript
 - Complete dark/light theme system
-- Raycast-inspired design
+- Modern minimalist design
 - Comprehensive test suite
 - CSS-in-JS implementation with theme integration
 - Production-ready build configuration

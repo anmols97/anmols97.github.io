@@ -15,7 +15,7 @@ export default function About() {
             and integrations with complex enterprise systems.
           </p>
           <p>
-            This portfolio is designed to be clean and fast, with a Raycast-inspired aesthetic and
+            This portfolio is designed to be clean and fast, with a minimalist aesthetic and
             keyboard-first UX.
           </p>
         </Container>
