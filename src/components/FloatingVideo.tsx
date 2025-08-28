@@ -67,7 +67,11 @@ export function FloatingVideo({ isHeroBackground = false, className = '' }: Floa
           }`}
           aria-label={isMuted ? 'Unmute video' : 'Mute video'}
         >
-          {isMuted ? <VolumeX size={20} className="sm:w-6 sm:h-6" /> : <Volume2 size={20} className="sm:w-6 sm:h-6" />}
+          {isMuted ? (
+            <VolumeX size={20} className="sm:w-6 sm:h-6" />
+          ) : (
+            <Volume2 size={20} className="sm:w-6 sm:h-6" />
+          )}
         </button>
       </div>
     )
