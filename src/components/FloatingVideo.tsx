@@ -2,7 +2,12 @@ import { useState, useRef, useEffect } from 'react'
 import { Volume2, VolumeX } from 'lucide-react'
 import { useTheme } from './ThemeProvider'
 
-export function FloatingVideo() {
+interface FloatingVideoProps {
+  isHeroBackground?: boolean
+  className?: string
+}
+
+export function FloatingVideo({ isHeroBackground = false, className = '' }: FloatingVideoProps) {
   const [isMuted, setIsMuted] = useState(true)
   const videoRef = useRef<HTMLVideoElement>(null)
   const { dark } = useTheme()
@@ -34,6 +39,41 @@ export function FloatingVideo() {
     setIsMuted(!isMuted)
   }
 
+  if (isHeroBackground) {
+    return (
+      <div className={`absolute inset-0 ${className}`}>
+        {/* Background Video */}
+        <video
+          ref={videoRef}
+          key={videoSrc}
+          src={videoSrc}
+          autoPlay
+          loop
+          muted={isMuted}
+          playsInline
+          className="w-full h-full object-cover"
+        />
+
+        {/* Overlay for text readability */}
+        <div className={`absolute inset-0 ${dark ? 'bg-black/40' : 'bg-white/30'}`} />
+
+        {/* Floating Mute/Unmute Button */}
+        <button
+          onClick={toggleMute}
+          className={`absolute top-6 right-6 p-4 rounded-full transition-all duration-200 backdrop-blur-md border shadow-xl hover:scale-110 z-10 ${
+            dark
+              ? 'bg-black/30 hover:bg-black/50 text-white border-white/30'
+              : 'bg-white/30 hover:bg-white/50 text-gray-900 border-gray-300/30'
+          }`}
+          aria-label={isMuted ? 'Unmute video' : 'Mute video'}
+        >
+          {isMuted ? <VolumeX size={24} /> : <Volume2 size={24} />}
+        </button>
+      </div>
+    )
+  }
+
+  // Original sidebar video
   return (
     <div className="relative">
       {/* Floating Video */}
