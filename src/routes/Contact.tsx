@@ -1,6 +1,7 @@
 import { Layout } from '../components/Layout'
 import { Container } from '../components/Container'
 import { Seo } from '../lib/seo'
+import { FormattedMessage } from 'react-intl'
 
 export default function Contact() {
   return (
@@ -9,15 +10,17 @@ export default function Contact() {
       <section className="section">
         <Container className="max-w-xl">
           <div className="card p-6">
-            <h2 className="text-2xl font-semibold">Let’s talk</h2>
+            <h2 className="text-2xl font-semibold">
+              <FormattedMessage id="contact.title" />
+            </h2>
             <p className="text-muted mt-2">
-              The best way to reach me is email. I usually respond within a day.
+              <FormattedMessage id="contact.description" />
             </p>
             <a
               href="mailto:anmolsingh2282@gmail.com"
               className="mt-6 inline-block px-5 py-3 rounded-xl bg-white text-[#0b0f1a] font-medium"
             >
-              Email me
+              <FormattedMessage id="contact.emailButton" />
             </a>
           </div>
         </Container>
