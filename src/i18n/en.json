@@ -28,5 +28,10 @@
   "logoCloud.vite": "Vite",
   "logoCloud.azure": "Azure",
   "logoCloud.oracle": "Oracle",
-  "notFound.message": "404 - Page not found"
+  "notFound.message": "404 - Page not found",
+  "about.title": "About",
+  "about.paragraph1": "I'm a full-stack software engineer with 3+ years of experience building scalable web applications and cloud-native solutions. Currently at University of Idaho, I architect React frontends, design Azure cloud infrastructure, and engineer data processing systems that serve thousands of users.",
+  "about.paragraph2": "My expertise spans modern web technologies (React, TypeScript, Node.js), cloud platforms (Azure, AWS), and enterprise integrations. I've successfully implemented distributed systems including Raft consensus algorithms, developed secure API middleware, and built dynamic Power BI dashboards that drive business decisions.",
+  "about.paragraph3": "I hold multiple Azure certifications and an MS in Software Engineering, with proven experience in Agile development, TDD practices, and mentoring fellow developers. I believe in writing clean, maintainable code that solves real problems.",
+  "about.downloadResume": "Download Resume"
 }
